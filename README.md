@@ -2,17 +2,42 @@
 
 This is a Python conversion of the original R-based analysis of World Bank Bangladesh Informal Firms Survey data from 2010.
 
+## 📊 **View the Analysis**
+
+🌐 **[Interactive HTML Report](docs/reports/Bangladesh_Informal_Firms_Complete_Analysis.html)** - Complete analysis with all visualizations  
+📓 **[Jupyter Notebook](notebooks/Bangladesh_Informal_Firms_Complete_Analysis.ipynb)** - Source notebook for exploration
+
 ## Project Structure
 
-- `Bangladesh_Informal_Firms_Analysis.ipynb` - Part 1: Geographic analysis, revenue distributions, and ISIC classifications
-- `Bangladesh_Analysis_Part2.ipynb` - Part 2: Business size analysis, financing sources, and final plots
-- `requirements.txt` - Python dependencies
-- Data files:
-  - `informality_data_NEW.csv` - Main survey data
-  - `surveydata_with_ISIC.csv` - Survey data with ISIC classifications
-  - `ISIC_Rev_3_english_structure.csv` - Industry classification reference
-  - `shp/` directory - Bangladesh district boundary shapefiles
-  - `Sources of Information.txt` - Data source documentation
+```
+notebooks/
+├── Bangladesh_Informal_Firms_Complete_Analysis.ipynb    # 🎯 MAIN ANALYSIS
+└── archive/                                            # Original parts
+    ├── Bangladesh_Informal_Firms_Analysis.ipynb        
+    └── Bangladesh_Analysis_Part2.ipynb                 
+
+data/
+├── raw/                                               # Survey & classification data
+│   ├── informality_data_NEW.csv                      # Main survey data
+│   ├── surveydata_with_ISIC.csv                      # Survey data with ISIC 
+│   └── ISIC_Rev_3_english_structure.csv              # Industry classifications
+└── spatial/bangladesh_districts/                      # District boundary shapefiles
+
+docs/
+├── reports/
+│   └── Bangladesh_Informal_Firms_Complete_Analysis.html  # 📈 HTML Export
+└── Sources of Information.txt                         # Data sources
+
+outputs/
+├── figures/                                          # For generated plots
+└── tables/                                           # For exported tables
+```
+
+## 🎯 **Key Findings**
+
+1. **Geographic Concentration**: Districts with major cities (Dhaka, Chittagong, Khulna) show highest average revenues
+2. **Sector Labor Efficiency**: Retail & Repair firms achieve higher revenue per employee than Manufacturing/Hotels
+3. **Financing Segmentation**: Government banks serve high-revenue manufacturers; microfinance targets smaller retail businesses
 
 ## Setup
 
